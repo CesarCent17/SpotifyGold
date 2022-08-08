@@ -15,3 +15,17 @@ C:\Users\p5\CesarCentProjects\SpotifyGold\obj\Debug\SpotifyGold.csproj.CoreCompi
 C:\Users\p5\CesarCentProjects\SpotifyGold\obj\Debug\SpotifyGold.exe
 C:\Users\p5\CesarCentProjects\SpotifyGold\obj\Debug\SpotifyGold.pdb
 C:\Users\p5\CesarCentProjects\SpotifyGold\obj\Debug\SpotifyGold_Content.g.cs
+C:\Users\p5\CesarCentProjects\SpotifyGold\obj\Debug\Theme\TextboxTheme.baml
+C:\Users\p5\CesarCentProjects\SpotifyGold\obj\Debug\App.baml
+C:\Users\p5\CesarCentProjects\SpotifyGold\obj\Debug\Theme\MenuButtonTheme.baml
+C:\Users\p5\CesarCentProjects\SpotifyGold\obj\Debug\MVVM\View\HomeView.g.cs
+C:\Users\p5\CesarCentProjects\SpotifyGold\obj\Debug\MVVM\View\LeaveView.g.cs
+C:\Users\p5\CesarCentProjects\SpotifyGold\obj\Debug\MVVM\View\SearchArtistView.g.cs
+C:\Users\p5\CesarCentProjects\SpotifyGold\obj\Debug\MVVM\View\SearchDetailsView.g.cs
+C:\Users\p5\CesarCentProjects\SpotifyGold\obj\Debug\MVVM\View\SearchImageView.g.cs
+C:\Users\p5\CesarCentProjects\SpotifyGold\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\p5\CesarCentProjects\SpotifyGold\obj\Debug\MVVM\View\HomeView.baml
+C:\Users\p5\CesarCentProjects\SpotifyGold\obj\Debug\MVVM\View\LeaveView.baml
+C:\Users\p5\CesarCentProjects\SpotifyGold\obj\Debug\MVVM\View\SearchArtistView.baml
+C:\Users\p5\CesarCentProjects\SpotifyGold\obj\Debug\MVVM\View\SearchDetailsView.baml
+C:\Users\p5\CesarCentProjects\SpotifyGold\obj\Debug\MVVM\View\SearchImageView.baml

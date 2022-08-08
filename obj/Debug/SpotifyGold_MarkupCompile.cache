@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\p5\CesarCentProjects\SpotifyGold\App.xaml
-1219584333
+8738810344
 11744178910
-51579654133
+1883592276
 13-38814620
-MainWindow.xaml;
+MainWindow.xaml;MVVM\View\HomeView.xaml;MVVM\View\LeaveView.xaml;MVVM\View\SearchArtistView.xaml;MVVM\View\SearchDetailsView.xaml;MVVM\View\SearchImageView.xaml;Theme\MenuButtonTheme.xaml;Theme\TextboxTheme.xaml;
 
 False
 
