@@ -7,31 +7,32 @@
     <DataTemplate x:Key="ListArtistTemplate">
         <StackPanel Orientation="Horizontal">
             <Image 
-                            Height="180" 
-                            Width="180" 
+                            Height="120" 
+                            Width="120" 
                             Margin="5" 
                             Source="{Binding Image}"/>
             <StackPanel Margin="20" VerticalAlignment="Center">
                 <TextBlock MaxWidth="500"
-                            FontSize="30"
+                            FontSize="20"
+                                Foreground="White"
+                           
                             Text="{Binding Name}"
-                            FontFamily="/Fonts/#Louis George Cafe"
+                            FontFamily="{StaticResource PoppinsSemiBold}"
                             TextTrimming="CharacterEllipsis">
                     <TextBlock.ToolTip>
                         <StackPanel>
                             <TextBlock
-                                FontSize="20"
-                                FontFamily="/Fonts/#Louis George Cafe"
-                                Foreground="White"
+                                FontFamily="{StaticResource PoppinsSemiBold}"
                                 Text="{Binding Name}"/>
                         </StackPanel>
                     </TextBlock.ToolTip>
                 </TextBlock>
-                <TextBlock FontSize="30" Text="{Binding Popularity}"/>
+                <TextBlock FontSize="16" Text="{Binding Popularity}" Foreground="White"/>
                 <TextBlock
-                        FontFamily="/Fonts/#Louis George Cafe"
-                        FontSize="20" 
-                        Text="{Binding Followers}"/>
+                        FontFamily="{StaticResource PoppinsSemiBold}"
+                        FontSize="16" 
+                        Text="{Binding Followers}"
+                        Foreground="White"/>
             </StackPanel>
         </StackPanel>
     </DataTemplate>
@@ -60,8 +61,8 @@
     <DataTemplate x:Key="ListArtistImageTemplate">
         <StackPanel Orientation="Horizontal">
             <Image 
-                            Height="130" 
-                            Width="130" 
+                            Height="120" 
+                            Width="120" 
                             Margin="5"
                             Source="{Binding Image}"/>
 

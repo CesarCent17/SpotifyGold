@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using SpotifyGold.Helpers;
+using SpotifyGold.MVVM.Model;
 
 namespace SpotifyGold.MVVM.View
 {
@@ -22,7 +24,40 @@ namespace SpotifyGold.MVVM.View
     {
         public SearchDetailsView()
         {
+            Task.Run(async () => await SearchHelper.GetTokenAsync());
             InitializeComponent();
         }
+
+        private void txtSearch_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (SearchBox.Text == string.Empty)
+            {
+                System.Console.WriteLine("La lista es nula");
+                ListArtist.ItemsSource = null;
+                return;
+            }
+            var result = SearchHelper.SearchArtistOrSong(SearchBox.Text);
+
+            if (result == null)
+            {
+                return;
+            }
+            var listArtist = new List<SpotifyArtist>();
+
+            foreach (var item in result.artists.items)
+            {
+                listArtist.Add(new SpotifyArtist()
+                {
+                    ID = item.id,
+                    Image = item.images.Any() ? item.images[0].url : "https://w7.pngwing.com/pngs/973/860/png-transparent-anonym-avatar-default-head-person-unknown-user-user-pictures-icon-thumbnail.png",
+                    Name = item.name,
+                    Popularity = $"{item.popularity}% Popularidad",
+                    Followers = $"{item.followers.total.ToString("N")} Seguidores",
+
+                });
+            }
+            ListArtist.ItemsSource = listArtist;
+        }
     }
+    
 }
