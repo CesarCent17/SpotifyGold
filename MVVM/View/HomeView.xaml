@@ -7,14 +7,50 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
+        
         <StackPanel>
-            <TextBlock Text="Discover more"
-                   Foreground="White"
-                   FontSize="28"
-                   HorizontalAlignment="Left"
-                   Margin="0,0,0,20"/>
+
+            <Border CornerRadius="10"
+                            Background="#F0F0F0"
+                            Width="300"
+                            Height="40"
+                    >
+                <Grid>
+                    <Rectangle StrokeThickness="1"/>
+                    <TextBox 
+                         Margin="5"
+                         BorderThickness="0"
+                         Background="Transparent"
+                         VerticalContentAlignment="Center"
+                         Foreground="#7E7E7E"
+                         x:Name="SearchBox"
+                        />
+
+                    <TextBlock IsHitTestVisible="False"
+                                       Text="Search"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Left"
+                                       Margin="10,0,0,0"
+                                       FontSize="11"
+                                       Foreground="DarkGray"
+                                       >
+
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Text, ElementName=SearchBox}" Value="">
+                                        <Setter Property="Visibility" Value="Visible"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                                <Setter Property="Visibility" Value="Hidden"/>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                </Grid>
+
+            </Border>
             <StackPanel Orientation="Horizontal"
-                    Margin="0,0,0,10">
+                    Margin="0,60,0,10">
                 <Border Width="600"
                         Height="200"
                         Margin="50,0,0,0">

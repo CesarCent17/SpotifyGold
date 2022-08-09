@@ -39,15 +39,9 @@
                     <RowDefinition Height="405"/>
                 </Grid.RowDefinitions>
 
-                <TextBox Width="300"
-                     Height="40"
-                     VerticalContentAlignment="Center"
-                     HorizontalAlignment="Center"
-                     Margin="5"
-                     Grid.Column="1"
-                     Style="{StaticResource ModernTextbox}"/>
+                
 
-                <ContentControl Grid.Row="1"
+                <ContentControl Grid.RowSpan="2"
                             Grid.Column="1"
                             Margin="10"
                             Content="{Binding CurrentView}"/>

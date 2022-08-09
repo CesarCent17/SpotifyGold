@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static SpotifyGold.MVVM.Model.SpotifySearch;
 
-namespace SpotifyVera.Helpers
+namespace SpotifyGold.Helpers
 {
     public static class SearchHelper
     {
