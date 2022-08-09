@@ -24,5 +24,11 @@ namespace SpotifyGold.MVVM.View
         {
             InitializeComponent();
         }
+
+        private void Yes(object sender, RoutedEventArgs e)
+        {
+
+            Application.Current.Shutdown();
+        }
     }
 }
