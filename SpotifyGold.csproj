@@ -152,6 +152,7 @@
     <Resource Include="Images\Spotify_Logo_RGB_White.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\song.PNG" />
     <Content Include="Images\spotify-logo.svg" />
   </ItemGroup>
   <ItemGroup>

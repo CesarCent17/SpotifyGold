@@ -7,6 +7,48 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <TextBlock Text="Opcion 1"></TextBlock>
+        <StackPanel>
+            <TextBlock Text="Discover more"
+                   Foreground="White"
+                   FontSize="28"
+                   HorizontalAlignment="Left"
+                   Margin="0,0,0,20"/>
+            <StackPanel Orientation="Horizontal"
+                    Margin="0,0,0,10">
+                <Border Width="600"
+                        Height="200"
+                        Margin="50,0,0,0">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                            <GradientStop Color="#844eff" Offset="0.0"/>
+                            <GradientStop Color="#3aa0ff" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+
+                    <Border.Clip>
+                        <RectangleGeometry RadiusX="10"
+                                       RadiusY="10"
+                                       Rect="0,0,600,200"/>
+                    </Border.Clip>
+                    <Grid>
+                        <StackPanel>
+                            <TextBlock Text="Music to fly"
+                                   Foreground="White"
+                                   FontSize="28"
+                                   Margin="20,10,10,0"/>
+                            <TextBlock Text="The best of each artist!"
+                                   Foreground="White"
+                                   FontSize="18"
+                                   Margin="20,10,10,0"/>
+                            <Image Source="/Images/song.PNG" Width="250" Height="250" Margin="350,-90,0,0"/>
+
+                        </StackPanel>
+                    </Grid>
+                </Border>
+                
+            </StackPanel>
+
+            
+        </StackPanel>
     </Grid>
 </UserControl>
