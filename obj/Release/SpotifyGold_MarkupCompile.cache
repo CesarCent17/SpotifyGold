@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\CesarCent\Desktop\Projects\SpotifyGold\obj\Release\
+C:\Users\p5\CesarCentProjects\SpotifyGold\obj\Release\
 SpotifyGold
 none
 false
 TRACE
-C:\Users\CesarCent\Desktop\Projects\SpotifyGold\App.xaml
+C:\Users\p5\CesarCentProjects\SpotifyGold\App.xaml
 8738810344
 11744178910
-1883592276
-13-38814620
+22241581148
+26-1361013954
 MainWindow.xaml;MVVM\View\HomeView.xaml;MVVM\View\LeaveView.xaml;MVVM\View\SearchArtistView.xaml;MVVM\View\SearchDetailsView.xaml;MVVM\View\SearchImageView.xaml;Theme\MenuButtonTheme.xaml;Theme\TextboxTheme.xaml;
 
 True
