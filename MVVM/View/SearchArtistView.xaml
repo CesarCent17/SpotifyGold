@@ -66,6 +66,8 @@
                 </Grid.RowDefinitions>
                 <DockPanel>
                     <ListView
+                 
+                        BorderThickness="0"
                         Grid.Row="1"
                         Margin="10"
                         x:Name="ListArtist"
