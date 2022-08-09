@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <TextBlock Text="Opcion 5"></TextBlock>
+        <TextBlock Text="Opcion 5 aaaaaaa"></TextBlock>
 
     </Grid>
 </UserControl>

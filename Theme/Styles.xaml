@@ -32,7 +32,6 @@
                         FontFamily="/Fonts/#Louis George Cafe"
                         FontSize="20" 
                         Text="{Binding Followers}"/>
-
             </StackPanel>
         </StackPanel>
     </DataTemplate>
@@ -49,6 +48,35 @@
                     <TextBlock.ToolTip>
                         <StackPanel>
                             <TextBlock
+                                Foreground="White"
+                                Text="{Binding Name}"/>
+                        </StackPanel>
+                    </TextBlock.ToolTip>
+                </TextBlock>
+            </StackPanel>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="ListArtistImageTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Image 
+                            Height="130" 
+                            Width="130" 
+                            Margin="5"
+                            Source="{Binding Image}"/>
+
+            <StackPanel Margin="20" VerticalAlignment="Center">
+                <TextBlock MaxWidth="500"
+                            FontSize="20"
+                            FontFamily="{StaticResource PoppinsSemiBold}"
+                            Foreground="White"
+                            Text="{Binding Name}"
+                            TextTrimming="CharacterEllipsis">
+                    <TextBlock.ToolTip>
+                        <StackPanel>
+                            <TextBlock
+                                FontSize="20"
+                                FontFamily="/Fonts/#PoppinsSemiBold"
                                 Foreground="White"
                                 Text="{Binding Name}"/>
                         </StackPanel>
