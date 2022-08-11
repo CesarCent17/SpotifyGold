@@ -12,7 +12,7 @@
         mc:Ignorable="d"
         WindowState="Maximized"
        
-        Title="MainWindow" Height="600" Width="950">
+        Title="SpotifyGold" Height="600" Width="950">
     
     <Window.DataContext>
         <viewModel:MainViewModel/>

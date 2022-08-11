@@ -9,6 +9,7 @@ namespace SpotifyGold.MVVM.ViewModel
 {
     class MainViewModel : ObservableObject
     {
+        //Comandos prop
         public RelayCommand HomeViewCommand { get; set; }
         public RelayCommand SearchArtistViewCommand { get; set; }
         public RelayCommand SearchImageViewCommand { get; set; }
@@ -17,7 +18,7 @@ namespace SpotifyGold.MVVM.ViewModel
 
 
 
-
+        //ViewModels prop
         public HomeViewModel HomeVM { get; set; }
         public SearchArtistViewModel SearchArtistMV { get; set; }
         public SearchImageViewModel SearchImageMV { get; set; }
@@ -26,7 +27,7 @@ namespace SpotifyGold.MVVM.ViewModel
 
 
 
-
+        // Vista actual para usarla en el ContentControl
         private object _currentView;
         public object CurrentView
         {
@@ -37,8 +38,11 @@ namespace SpotifyGold.MVVM.ViewModel
                 OnPropertyChanged();
             }
         }
+
+        // Constructor
         public MainViewModel()
         {
+            //Instancias de los ViewModels
             HomeVM = new HomeViewModel();
             SearchArtistMV = new SearchArtistViewModel();
             SearchImageMV = new SearchImageViewModel();
@@ -47,6 +51,7 @@ namespace SpotifyGold.MVVM.ViewModel
 
             CurrentView = HomeVM;
 
+            
             HomeViewCommand = new RelayCommand(o =>
             {
                 CurrentView = HomeVM;

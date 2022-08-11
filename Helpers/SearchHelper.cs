@@ -49,6 +49,7 @@ namespace SpotifyGold.Helpers
         //Metodo que me retorna valores de tipo SpotifyResult
         public static SpotifyResult SearchArtistOrSong(string searchWord)
         {
+            
             // instancio client, request, response y ejecuto la solicitud
             var client = new RestClient("https://api.spotify.com/v1/search");
             client.AddDefaultHeader("Authorization", $"Bearer {token.access_token}");

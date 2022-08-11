@@ -32,10 +32,7 @@
                                    Foreground="White"
                                    FontSize="25"
                                    Margin="0,50,10,0"/>
-                        <!--<TextBlock Text="The best of each artist!"
-                                   Foreground="White"
-                                   FontSize="18"
-                                   Margin="20,10,10,0"/>-->
+                       
                         <RadioButton Content="Yes go out!"
                              Margin="0,20,0,0"
                              Height="50"
@@ -46,7 +43,7 @@
                              Style="{StaticResource MenuButtonTheme}"
                              />
                         
-
+       
 
                     </StackPanel>
                 </Grid>
