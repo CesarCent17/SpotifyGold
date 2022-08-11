@@ -1,5 +1,6 @@
 ﻿namespace SpotifyGold.MVVM.Model
 {
+    //Clase que describe a un artista
     public class SpotifyArtist
     {
         public string ID { get; set; }

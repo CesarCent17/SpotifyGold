@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 
 namespace SpotifyGold.Core
 {
+    //Implementacion de la interfaz INotifyPropertyChanged
+    //Notifica a los clientes que un valor de propiedad ha cambiado.
     internal class ObservableObject : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;

@@ -14,6 +14,7 @@ namespace SpotifyGold.Helpers
     {
         public static Token token { get; set; }
 
+        //Obtiene el token
         public static async Task GetTokenAsync()
         {
             #region SecretVault
@@ -22,35 +23,47 @@ namespace SpotifyGold.Helpers
             string clientSecret = "7af3b3575a264224abfc9f22c380bbfb";
             #endregion
 
-            string auth = Convert.ToBase64String(Encoding.UTF8.GetBytes(clientID + ":" + clientSecret)); //se define el tipo de acceso y la credencial
+            //Codifica los strings del clientID, clienteSecret y los convierte en una matriz de bytes
+            string auth = Convert.ToBase64String(Encoding.UTF8.GetBytes(clientID + ":" + clientSecret));
 
+            //Lista de Llave-Valor que contiene un elemento
             List<KeyValuePair<string, string>> args = new List<KeyValuePair<string, string>>
             {
                 new KeyValuePair<string, string>("grant_type", "client_credentials")
             };
 
-            HttpClient client = new HttpClient(); //creo un cliente Http
+            //Instancia de HttpClient, sesión para enviar solicitudes HTTP. 
+            HttpClient client = new HttpClient(); 
             client.DefaultRequestHeaders.Add("Authorization", $"Basic {auth}");
-            HttpContent content = new FormUrlEncodedContent(args); //invoco
+
+            // Codifica mi lista de tipo KeyValuePair y crea una instancia de FormUrlEncodedContent
+            HttpContent content = new FormUrlEncodedContent(args);
 
             HttpResponseMessage resp = await client.PostAsync("https://accounts.spotify.com/api/token", content); //es como una firma para traerme los objetos
             string msg = await resp.Content.ReadAsStringAsync();
 
+            //Deserializar el msg, pasa a ser un objeto tipo Token
             token = JsonConvert.DeserializeObject<Token>(msg);
         }
 
+        //Metodo que me retorna valores de tipo SpotifyResult
         public static SpotifyResult SearchArtistOrSong(string searchWord)
         {
+            // instancio client, request, response y ejecuto la solicitud
             var client = new RestClient("https://api.spotify.com/v1/search");
             client.AddDefaultHeader("Authorization", $"Bearer {token.access_token}");
-            var request = new RestRequest($"?q={searchWord}&type=artist", Method.Get); //Buaqueda por letra con el tipo de artista
-            var response = client.Execute(request); //se realiza la ejecución
+            var request = new RestRequest($"?q={searchWord}&type=artist", Method.Get);
+            var response = client.Execute(request);
 
-            if (response.IsSuccessful) //si es exitoso se realiza deserialización del objeto que se esta mapeando (lo que trajo el Json)
+            //si la solicitud tuvo exito
+            if (response.IsSuccessful)
             {
-                var result = JsonConvert.DeserializeObject<SpotifyResult>(response.Content); //deserializa el contenido
-                return result; //devuelve el resultado
+                //el content se deserializa
+                var result = JsonConvert.DeserializeObject<SpotifyResult>(response.Content);
+                return result;
             }
+
+            // si no, retorna nulo
             else
             {
                 return null;

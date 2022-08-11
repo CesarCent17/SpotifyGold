@@ -8,6 +8,7 @@ namespace SpotifyGold.MVVM.Model
 {
     public class SpotifySearch
     {
+        //Clases y propiedades que permiten deserializar el Json 
         public class ExternalUrls
         {
             public string spotify { get; set; }

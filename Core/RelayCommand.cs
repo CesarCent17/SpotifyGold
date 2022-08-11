@@ -3,6 +3,8 @@ using System.Windows.Input;
 
 namespace SpotifyGold.Core
 {
+    //Implemntacion de la interfaz ICommand
+    //Sirve para definir un comando
     class RelayCommand : ICommand
     {
         private Action<object> _execute;

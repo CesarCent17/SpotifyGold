@@ -6,6 +6,7 @@ using System.Windows.Controls;
 
 namespace SpotifyGold.Helpers
 {
+    //Realiza el consumo y los agrega a la lista ListArtist
     public static class ApiConsumption
     {
         public static void actionApi(TextBox SearchBox, ListView ListArtist)
@@ -23,6 +24,7 @@ namespace SpotifyGold.Helpers
             }
             var listArtist = new List<SpotifyArtist>();
 
+            //Por cada item de los resultados se va a agregar a la lista un objeto de tipo SpotifyArtist
             foreach (var item in result.artists.items)
             {
                 listArtist.Add(new SpotifyArtist()
