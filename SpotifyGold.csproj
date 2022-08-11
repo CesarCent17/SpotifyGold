@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>spotify-_1_.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
@@ -198,6 +201,7 @@
     <Resource Include="Images\Spotify_Logo_RGB_White.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="spotify-_1_.ico" />
     <Resource Include="Images\song.PNG" />
     <Content Include="Images\spotify-logo.svg" />
   </ItemGroup>
